@@ -1,0 +1,18 @@
+<h1>All the flats</h1>
+<table>
+  <tbody>
+    <div class="container">
+      <% @flats.each do |flat| %>
+        <tr>
+          <td><%= flat.name %></td>
+          <td><%= flat.address %></td>
+          <td><%= flat.description %></td>
+
+          <td><%= link_to 'Show', flat %></td>
+          <td><%= link_to 'Edit', edit_flat_path(flat) %></td>
+          <td><%= link_to 'Destroy', flat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+    </div>
+    <% end %>
+  </tbody>
+</table>
